@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../consts.dart';
+import 'exam_number_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -24,44 +25,47 @@ class MainScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              TabBar(tabs: [
-                Tab(
-                  icon: const Icon(
-                    Icons.home,
-                    color: Colors.grey,
-                  ),
-                  child: SizedBox(
-                    child: Text(
-                      'الرقم المتحاني',
-                      style: mainPageFontStyle,
+              TabBar(
+                  // isScrollable: true,
+                  indicatorColor: appBarColor,
+                  tabs: [
+                    Tab(
+                      icon: const Icon(
+                        Icons.home,
+                        color: Colors.grey,
+                      ),
+                      child: SizedBox(
+                        child: Text(
+                          'الرقم المتحاني',
+                          style: mainPageFontStyle,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Tab(
-                  icon: const Icon(
-                    Icons.home,
-                    color: Colors.grey,
-                  ),
-                  child: Text(
-                    'المحضرات',
-                    style: mainPageFontStyle,
-                  ),
-                ),
-                Tab(
-                  icon: const Icon(
-                    Icons.home,
-                    color: Colors.grey,
-                  ),
-                  child: Text(
-                    'علاماتي',
-                    style: mainPageFontStyle,
-                  ),
-                )
-              ]),
+                    Tab(
+                      icon: const Icon(
+                        Icons.home,
+                        color: Colors.grey,
+                      ),
+                      child: Text(
+                        'المحضرات',
+                        style: mainPageFontStyle,
+                      ),
+                    ),
+                    Tab(
+                      icon: const Icon(
+                        Icons.home,
+                        color: Colors.grey,
+                      ),
+                      child: Text(
+                        'علاماتي',
+                        style: mainPageFontStyle,
+                      ),
+                    )
+                  ]),
               const Expanded(
                   child: TabBarView(children: [
                 Center(
-                  child: Text('1'),
+                  child: ExamNumber(),
                 ),
                 Center(
                   child: Text('2'),
