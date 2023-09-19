@@ -19,26 +19,46 @@ class MainScreen extends StatelessWidget {
               style: appBarFontStyle,
             )),
           ),
-          body: const Column(
+          body: Column(
             children: [
+              const SizedBox(
+                height: 10,
+              ),
               TabBar(tabs: [
                 Tab(
-                    icon: Icon(
-                  Icons.home,
-                  color: Colors.green,
-                )),
+                  icon: const Icon(
+                    Icons.home,
+                    color: Colors.grey,
+                  ),
+                  child: SizedBox(
+                    child: Text(
+                      'الرقم المتحاني',
+                      style: mainPageFontStyle,
+                    ),
+                  ),
+                ),
                 Tab(
-                    icon: Icon(
-                  Icons.home,
-                  color: Colors.green,
-                )),
+                  icon: const Icon(
+                    Icons.home,
+                    color: Colors.grey,
+                  ),
+                  child: Text(
+                    'المحضرات',
+                    style: mainPageFontStyle,
+                  ),
+                ),
                 Tab(
-                    icon: Icon(
-                  Icons.home,
-                  color: Colors.green,
-                ))
+                  icon: const Icon(
+                    Icons.home,
+                    color: Colors.grey,
+                  ),
+                  child: Text(
+                    'علاماتي',
+                    style: mainPageFontStyle,
+                  ),
+                )
               ]),
-              Expanded(
+              const Expanded(
                   child: TabBarView(children: [
                 Center(
                   child: Text('1'),
