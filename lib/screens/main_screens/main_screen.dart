@@ -46,9 +46,11 @@ class MainScreen extends StatelessWidget {
                         Icons.home,
                         color: Colors.grey,
                       ),
-                      child: Text(
-                        'المحضرات',
-                        style: mainPageFontStyle,
+                      child: SizedBox(
+                        child: Text(
+                          'المحضرات',
+                          style: mainPageFontStyle,
+                        ),
                       ),
                     ),
                     Tab(
@@ -56,9 +58,11 @@ class MainScreen extends StatelessWidget {
                         Icons.home,
                         color: Colors.grey,
                       ),
-                      child: Text(
-                        'علاماتي',
-                        style: mainPageFontStyle,
+                      child: SizedBox(
+                        child: Text(
+                          'علاماتي',
+                          style: mainPageFontStyle,
+                        ),
                       ),
                     )
                   ]),
