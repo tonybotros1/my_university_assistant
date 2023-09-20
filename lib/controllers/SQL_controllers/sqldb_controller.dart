@@ -18,22 +18,24 @@ class SQLDB extends GetxController {
   initDB() async {
     String databasePath = await getDatabasesPath();
     String path = join(databasePath, 'universityAssistant.db');
-    Database mydb = await openDatabase(path, onCreate: _onCreate,version: 1,onUpgrade: _onUpgrade);
+    Database mydb = await openDatabase(path,
+        onCreate: _onCreate, version: 1, onUpgrade: _onUpgrade);
     return mydb;
   }
 
-  _onCreate(Database db, int version) async { // this method id called only once (on init the db)
+  _onCreate(Database db, int version) async {
+    // this method id called only once (on init the db)
     await db.execute('''
 CREATE TABLE "exam_number" (
-  id INTEGER AUTOINCREMENT NOT NULL PRIMARY KEY,
-  number TEXT NOT NULL 
+  "id" INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,
+  "number" TEXT NOT NULL 
 )
 ''');
     print('created================================');
   }
 
-  _onUpgrade(Database db,int oldVersion,int newVersion){
-
+  _onUpgrade(Database db, int oldVersion, int newVersion) {
+    print("changed");
   }
 
   readData(String sql) async {
