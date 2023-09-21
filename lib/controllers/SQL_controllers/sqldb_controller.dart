@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -24,7 +23,7 @@ class SQLDB extends GetxController {
   }
 
   _onCreate(Database db, int version) async {
-    // this method id called only once (on init the db)
+    // this method is called only once (on init the db)
     await db.execute('''
 CREATE TABLE "exam_number" (
   "id" INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,

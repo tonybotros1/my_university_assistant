@@ -34,9 +34,9 @@ class MainScreen extends StatelessWidget {
                         Icons.home,
                         color: Colors.grey,
                       ),
-                      child: SizedBox(
+                      child: FittedBox(
                         child: Text(
-                          'الرقم المتحاني',
+                          'الرقم الامتحاني',
                           style: mainPageFontStyle,
                         ),
                       ),
@@ -46,7 +46,7 @@ class MainScreen extends StatelessWidget {
                         Icons.home,
                         color: Colors.grey,
                       ),
-                      child: SizedBox(
+                      child: FittedBox(
                         child: Text(
                           'المحضرات',
                           style: mainPageFontStyle,
@@ -58,7 +58,7 @@ class MainScreen extends StatelessWidget {
                         Icons.home,
                         color: Colors.grey,
                       ),
-                      child: SizedBox(
+                      child: FittedBox(
                         child: Text(
                           'علاماتي',
                           style: mainPageFontStyle,
